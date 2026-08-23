@@ -1,4 +1,35 @@
-.img-tam{
-    width: 280px !important;
-    height: 280px !important;
+body {
+    background-color: #FDF8F5;
+    color: #3D2314;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.boton-nav {
+    background-color: #E8D8C8;
+    color: #3D2314;
+    border-radius: 8px;
+    padding: 6px 16px;
+    margin: 0 4px;
+    transition: background-color 0.4s ease;
+    /*transition: propiedad_a_animar tiempo_de_animacion temporizacion*/
+}
+
+.boton-nav:hover {
+    /* el color al pasar el cursor */
+    background-color: #FDF8F5;
+    color: #3D2314;
+}
+
+.anim-tam {
+    transition: transform 0.4s ease;
+}
+.anim-tam:hover {
+    transform: scale(1.08);
+}
+
+.carta {
+    background-color: #FDF8F5;
+    color: #3D2314;
+    border: none;
+    box-shadow: 0 4px 6px #3d23145a;
 }
