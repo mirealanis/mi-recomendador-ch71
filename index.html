@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<!--
+    d-flex: agrega display flex y permite controlar cómo se reparte el espacio.
+    flex-colum: acomoda los elementos de manera vertical, uno debajo de otro.
+    min-vh-100: vh -> Viewport Height, si la pantalla mide 900px, el body medirá lo mismo aunque el contenido mida 350px 
+-->
+
+<body class="d-flex flex-column min-vh-100">
     <!--!Empieza header-->
     <!--Contendrá el titulo principal y el navbar-->
-    <header class="container ">
-        <h1>Entre Cafés & Museos</h1>
+    <header class="container">
+        <h1 class="text-center m-2">Entre Cafés & Museos</h1>
         <nav class="navbar navbar-expand-lg border-bottom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -27,145 +33,180 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="#">Descripción</a>
-                        <a class="nav-link" href="#">Museos</a>
-                        <a class="nav-link" href="#">Cafeterías</a>
-                        <a class="nav-link" href="#">Extras</a>
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link boton-nav" href="#museos">Museos</a>
+                        <a class="nav-link boton-nav" href="#cafeterias">Cafeterías</a>
+                        <a class="nav-link boton-nav" href="#extras">Extras</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <!--!Termina header-->
-    <div>
-        <p>
-            Aquí encontrarás recomendaciones de museos interesantes, cafeterías y, ¿por qué no?, un poco de
-            música traanquila🎶
-        </p>
-    </div>
+    <main class="container flex-grow-1">
 
-    <!--Primero, separamos por secciones-->
-    <section id="museos">
-        <!--empieza contenedor para grid de sección museos-->
-        <!--Contenedor con texto centrado y alineación horizontal centrado-->
-        <div class="container text-center justify-content-center">
-            <!--?Se establecen los gutters para cada columna-->
-            <div class="row g-5">
-                <!--?Se establecen los breackpoint para responsive-->
-                <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
-                <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
-                <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/simicasa.png" class="card-img-top" alt="SimiCasa">
-                        <div class="card-body">
-                            <h5 class="card-title">SimiCasa</h5>
-                            <div class="m-2">
-                                <span>Museo</span>
-                                <span>Cafetería</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div><!--columna-->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/ChocoStory.png" class="card-img-top" alt="ChocoStory">
-                        <div class="card-body">
-                            <h5 class="card-title">ChocoStory</h5>
-                            <div class="m-2">
-                                <span>Museo</span>
-                                <span>Cafetería</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/MUPE.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">MUPE</h5>
-                            <div class="m-2">Museo</>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div><!--columna-->
-            </div><!--fila-->
-        </div><!--termina contenedor museos-->
-    </section><!--termina sección museos-->
-    <section id="cafeterías">
-        <div class="container text-center justify-content-center">
-            <!--?Se establecen los gutters para cada columna-->
-            <div class="row g-5">
-                <!--?Se establecen los breackpoint para responsive-->
-                <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
-                <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
-                <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/mitsucafe.png" class="card-img-top" alt="Mundo Mitsu'">
-                        <div class="card-body">
-                            <h5 class="card-title">Mundo Mitsu'</h5>
-                            <div class="m-2">
-                                <span>Cafetería</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div><!--columna-->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/delicioso.png" class="card-img-top" alt="El Delicioso">
-                        <div class="card-body">
-                            <h5 class="card-title">El Delicioso</h5>
-                            <div class="m-2">
-                                <span>Cafetería / Pastelería</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div><!--columna-->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    <div class="card"><!--Card-->
-                        <img src="/img/k-dalkom.png" class="card-img-top" alt="El Delicioso">
-                        <div class="card-body">
-                            <h5 class="card-title">K-Dalkom</h5>
-                            <div class="m-2">
-                                <span>Cafetería</span>
-                            </div>
-                            <a href="#" class="btn btn-primary">Más información</a>
-                        </div>
-                    </div><!--Card-->
-                </div><!--columna-->
-            </div><!--fila-->
-        </div><!--termina contenedor cafeterias-->
-    </section><!--termina sección cafeterias-->
-    <section id="extras">
-        <div class="container text-center justify-content-center">
-            <!--?Se establecen los gutters para cada columna-->
-            <div class="row g-5">
-                <!--?Se establecen los breackpoint para responsive-->
-                <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
-                <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
-                <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    a
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    a
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 border">
-                    a
-                </div>
-            </div>
-        </div><!--termina contenedor extras-->
-    </section><!--termina sección extras-->
+        <div class="text-center">
+            <p>
+                Aquí encontrarás recomendaciones de museos interesantes, cafeterías y, ¿por qué no?, un poco de
+                música tranquila🎶
+            </p>
+        </div>
 
+        <!--Primero, separamos por secciones-->
+        <section id="museos">
+            <h3 class="text-center">Museos</h3>
+            <!--empieza contenedor para grid de sección museos-->
+            <!--Contenedor con texto centrado y alineación horizontal centrado-->
+            <div class="container text-center justify-content-center">
+                <!--?Se establecen los gutters para cada columna-->
+                <div class="row g-5">
+                    <!--?Se establecen los breackpoint para responsive-->
+                    <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
+                    <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
+                    <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <!--Se agregan estilos personalizados a las cards-->
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/simicasa.png" class="card-img-top" alt="SimiCasa">
+                            <div class="card-body">
+                                <h5 class="card-title">SimiCasa</h5>
+                                <div class="m-2">
+                                    <span>Museo</span>
+                                    <span>Cafetería</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/ChocoStory.png" class="card-img-top" alt="ChocoStory">
+                            <div class="card-body">
+                                <h5 class="card-title">ChocoStory</h5>
+                                <div class="m-2">
+                                    <span>Museo</span>
+                                    <span>Cafetería</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/MUPE.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">MUPE</h5>
+                                <div class="m-2">Museo</>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                </div><!--fila-->
+            </div><!--termina contenedor museos-->
+        </section><!--termina sección museos-->
+        <section id="cafeterias">
+            <h3 class="text-center">Cafeterías</h3>
+            <div class="container text-center justify-content-center">
+                <!--?Se establecen los gutters para cada columna-->
+                <div class="row g-5">
+                    <!--?Se establecen los breackpoint para responsive-->
+                    <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
+                    <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
+                    <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/mitsucafe.png" class="card-img-top" alt="Mundo Mitsu'">
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Mitsu'</h5>
+                                <div class="m-2">
+                                    <span>Cafetería</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/delicioso.png" class="card-img-top" alt="El Delicioso">
+                            <div class="card-body">
+                                <h5 class="card-title">El Delicioso</h5>
+                                <div class="m-2">
+                                    <span>Cafetería / Pastelería</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/k-dalkom.png" class="card-img-top" alt="El Delicioso">
+                            <div class="card-body">
+                                <h5 class="card-title">K-Dalkom</h5>
+                                <div class="m-2">
+                                    <span>Cafetería</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                </div><!--fila-->
+            </div><!--termina contenedor cafeterias-->
+        </section><!--termina sección cafeterias-->
+        <section id="extras">
+            <h3 class="text-center">Extras</h3>
+            <div class="container text-center justify-content-center">
+                <!--?Se establecen los gutters para cada columna-->
+                <div class="row g-5">
+                    <!--?Se establecen los breackpoint para responsive-->
+                    <!--*para pantallas pequeñas, cada columna abarca 12 (col-sm-12) -->
+                    <!--*para pantallas medianas, cada columna abarca 6 (col-md-6) -->
+                    <!--*para pantallas grandes, cada columna abarca 4 (col-lg-4) -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/Monoman.png" class="card-img-top" alt="Monoman">
+                            <div class="card-body">
+                                <h5 class="card-title">Monoman</h5>
+                                <div class="m-2">
+                                    <span>Canal de Youtube</span>
+                                </div>
+                                <a href="https://youtube.com/@monoman?si=NW8SrPf2LpeL2xWh" class="btn btn-primary"
+                                    target="_blank">Escuchar</a>
+                            </div>
+                        </div><!--Card-->
+                    </div><!--columna-->
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/jannabi.png" class="card-img-top" alt="JANNABI">
+                            <div class="card-body">
+                                <h5 class="card-title">JANNABI</h5>
+                                <div class="m-2">
+                                    <span>Canción</span>
+                                </div>
+                                <a href="https://youtu.be/cNmzoTmQ_6c?si=TvvJO3e1PV6k8I2i" class="btn btn-primary"
+                                    target="_blank">Escuchar</a>
+                            </div>
+                        </div><!--Card-->
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 ">
+                        <div class="card anim-tam carta"><!--Card-->
+                            <img src="/img/aurora.png" class="card-img-top" alt="A Potion For Love">
+                            <div class="card-body">
+                                <h5 class="card-title">AURORA</h5>
+                                <div class="m-2">
+                                    <span>Canción</span>
+                                </div>
+                                <a href="https://youtu.be/gyGOOzHkfPY?si=ePPUTD8qHoep-CaK target=" _blank""
+                                    class="btn btn-primary">Escuchar</a>
+                            </div>
+                        </div><!--Card-->
+                    </div>
+                </div>
+            </div><!--termina contenedor extras-->
+        </section><!--termina sección extras-->
+    </main>
     <!--!Empieza footer-->
-    <footer>
+    <footer class="container text-center py-3">
         <p>
             2026 - Entre Café & Museos - Generation CH71
         </p>
