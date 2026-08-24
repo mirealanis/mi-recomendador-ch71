@@ -1,7 +1,18 @@
+/*Colores: 
+
+fondo oscuro: #1A0F0B
+letra clara: #F3E9DC
+cafe claro: #9A6735
+
+fondo claro: #FDF8F5
+letras oscuras: #3D2314
+color botones: #E8D8C8
+
+*/
 body {
-    background-color: #FDF8F5;
-    color: #3D2314;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1A0F0B; /*color de fondo*/
+    color: #F3E9DC; /*color de letras*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Fuente*/
 }
 
 .boton-nav {
@@ -20,16 +31,56 @@ body {
     color: #3D2314;
 }
 
-.anim-tam {
+.color-btn{
+    background-color: #9A6735 !important;
+    color: #3D2314 !important;
+    border:none !important;
+    transition: background-color 0.4s ease !important;
+}
+
+.color-btn:hover {
+    /* el color al pasar el cursor */
+    background-color: #7f5429 !important;
+    color: #3D2314 !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*
+    transition: define cómo se debe pasar de un estado a otro.
+    transform: define qué aspecto va a tener el elemento (forma, tamaño, etc.).
+*/
+.anim-tam{
     transition: transform 0.4s ease;
 }
 .anim-tam:hover {
     transform: scale(1.08);
 }
-
 .carta {
-    background-color: #FDF8F5;
-    color: #3D2314;
-    border: none;
-    box-shadow: 0 4px 6px #3d23145a;
+    background-color: #2B1B17;
+    color: #F3E9DC;
+    border: none; /*quita el borde de las card de bootstrap*/
+    box-shadow: 0 4px 6px #8c6239a7;
+}
+.descripcion{
+    width: 100%;
+    height: 500px;
+    color: #F3E9DC;
+    font-size: 25px;
+    margin: 10px;
+    background-image:url(/img/taza.png);
+    background-size: cover;
+    background-position: center;
+}
+.fondo{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #9a68359a;
+}
+.subtitulo{
+    margin: 25px;
 }
