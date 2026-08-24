@@ -72,14 +72,14 @@ a{
     font-size: 25px;
     margin: 10px;
     background-image:url(/img/taza.png);
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /*La imagen cubre todo el contenedor*/
+    background-position: center; /*centra imagen dentro del contenedor*/
 }
 .fondo{
     width: 100%;
     height: 100%;
     border-radius: 8px;
-    background-color: #9a68359a;
+    background-color: #6b4a2680;
 }
 .subtitulo{
     margin: 25px;
